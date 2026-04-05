@@ -1,14 +1,14 @@
 import React from 'react';
-import CardList from './components/CardList/CardList';
-import { cardsData } from './data';
-import './App.css'; // Якщо залишили стандартний файл стилів
+import ProfileCard from './components/ProfileCard';
 
 function App() {
   return (
-    <div className="App">
-      <h1 style={{ textAlign: 'center', marginTop: '20px' }}>Галерея React-карток</h1>
-      {/* Передаємо масив об'єктів через пропси */}
-      <CardList cards={cardsData} />
+    <div style={{ backgroundColor: '#f5f5f5', minHeight: '100vh', padding: '20px' }}>
+      <ProfileCard 
+        name="Іван Франко" 
+        photo="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" 
+        description="Український поет, прозаїк, драматург, літературний критик, публіцист, перекладач, науковець, громадський і політичний діяч."
+      />
     </div>
   );
 }
